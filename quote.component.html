@@ -1,0 +1,15 @@
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<div class="container">
+    <div class="row qt">
+<blockquote>{{quoteCtrl.currentQuote.quoteText}}</blockquote>
+<cite> {{quoteCtrl.currentQuote.quoteAuthor}}</cite>
+    </div>
+<a class="btn btn-primary" ng-click="quoteCtrl.generateQuote()"><i>random</i></a><a class="btn btn-primary" ng-href="https://twitter.com/intent/tweet?text={{quoteCtrl.currentQuote.quoteText}}  --{{quoteCtrl.currentQuote.quoteAuthor}}"><i>tweet</i></a>
+    </div>
+<div class = "row">
+<ul ng-repeat = "item in quoteCtrl.quoteList">
+<li>{{item.quoteText}},{{item.quoteAuthor}} <a ng-href="https://twitter.com/intent/tweet?text={{item.quoteText}}  --{{item.quoteAuthor}}">tweet</a></li>
+</ul>
+    </div>
+</div>
